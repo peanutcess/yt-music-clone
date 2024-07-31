@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/themeProvier";
-import {sleep} from "@/lib/utils"
-import Sidebar from "@/components/Sidebar"
+import Sidebar from "@/components/Sidebar";
+import PlayerWrapper from "@/components/player/PlayerWrapper"
 
 
 
@@ -26,9 +26,8 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Sidebar>
-            {children}
-            </Sidebar>
+            <Sidebar>{children}</Sidebar>
+            <PlayerWrapper/>
           </ThemeProvider>
       </body>
     </html>
